@@ -3,80 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orange Designer</title>
-
-    <!-- CSS Link -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-
-    <!-- CSS only -->
+    <title title="Orange Designer">Orange Designer</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-
-    <!-- JS, Popper.js, and jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Google fonts -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="assets/font/flaticon.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
   </head>
-  <body data-spy="scroll" data-target="#main-nav" data-offset="50">
-    <div class="main" id="home">
-      <nav class="position-fixed navBar" id="scr-fix">
-        <div class="nav-brand">
-          <h2>Orange Designer</h2>
-        </div>
+  <body data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+    <div class="position-fixed progress-fixed" id="progress-fixed">
+      <nav id="navbar-example2" class="navbar">
+        <a class="navbar-brand" href="#">Orange Designer</a>
+        <!-- <i class="fas fa-bars" onclick="menu()"></i> -->
         <svg
-          width="1.5em"
-          height="1.5em"
+          width="1em"
+          height="1em"
           viewBox="0 0 16 16"
-          class="bi bi-justify fa fa-bars"
+          class="bi bi-list fas fa-bars"
+          onclick="menu()"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
-          onclick="menu()"
         >
           <path
             fill-rule="evenodd"
-            d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
           />
         </svg>
-        <ul class="nav-list" id="main-nav">
-          <li>
-            <a href="#home" class="active style" id="ul-nav-list">Home</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="#home" class="nav-link style">Home</a>
           </li>
-          <li><a href="#about" class="style" id="ul-nav-list2">About</a></li>
-          <li>
-            <a href="#services" class="style" id="ul-nav-list">Services</a>
+          <li class="nav-item">
+            <a class="nav-link style" href="#about">About</a>
           </li>
-          <li><a href="#works" class="style" id="ul-nav-list">Works</a></li>
-          <li><a href="#contact" class="style" id="ul-nav-list">Contact</a></li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link style">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link style" href="#works">Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link style" href="#contact">Contact</a>
+          </li>
+          <!-- <i class="fas fa-times-circle" id="times" onclick="menu()"></i> -->
           <svg
-            width="1.5em"
-            height="1.5em"
+            width="1em"
+            height="1em"
             viewBox="0 0 16 16"
-            class="bi bi-x fa fa-times"
+            class="bi bi-x fas fa-times-circle"
+            onclick="menu()"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
-            onclick="menu()"
           >
             <path
               fill-rule="evenodd"
@@ -85,63 +75,146 @@
           </svg>
         </ul>
       </nav>
+    </div>
 
-      <div class="container-fluid banner-div">
-        <div class="row">
-          <div class="col-md-7">
-            <img src="assets/images/banner.webp" class="img-fluid banner-img" />
-          </div>
-
-          <div class="col-md-5 right-div">
-            <div class="type">
-              <p class="line-1 anim-typewriter">
-                Build your own Cards with Us..
-              </p>
+    <div>
+      <div id="home" style="height: 100vh">
+        <div class="container-fluid p-0" style="padding-top: 120px !important">
+          <div class="row">
+            <div class="col-md-7 left-div">
+              <img
+                src="assets/images/banner.webp"
+                class="img-fluid banner-img"
+              />
             </div>
 
-            <div class="explore text-center">
-              <h3 class="type-heading">Join Us... Explore with Us</h3>
-              <button class="btn"><span>Explore</span></button>
+            <div class="col-md-5 right-div">
+              <div class="type text-center">
+                <p class="line-1 anim-typewriter">
+                  Build your own Cards with Us..
+                </p>
+              </div>
+
+              <div class="explore text-center">
+                <h3 class="type-heading">Join Us... Explore with Us</h3>
+                <a href="#about"
+                  ><button class="btn" href="#about">
+                    <span>Explore</span>
+                  </button></a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="about" id="about">
-      <div class="section-title text-center">
-        <h1>
-          ABOUT US<br /><span class="about-sub">We create what you Desire</span>
-        </h1>
-      </div>
-      <div class="container shadow p-0">
-        <div class="row mx-auto">
-          <div class="col-md-6 text-center">
-            <img
-              src="assets/images/about us.png"
-              height="500"
-              width="500"
-              class="img-fluid"
-            />
-          </div>
-          <div
-            class="col-md-6 about-div" style="margin-top:40px;"
-          >
-            <h5 style="padding:10px;">
-              We are passionate about the finest, most cost-effective and timely
-              printing services and promotional items available anywhere in the
-              country. Up-to-date on technology, we create beautiful printed
-              projects, with an easy and pain-free workflow system. We pride
-              ourselves on our commitment to great customer service.<br />
-              <br />
-            </h5>
-            <button class="btn"><span>Contact Us</span></button>
+      <div class="about" id="about" style="height: auto">
+        <div
+          class="section-title text-center"
+          style="padding-top: 120px !important"
+        >
+          <h1>
+            ABOUT US<br /><span class="about-sub"
+              >We create what you Desire</span
+            >
+          </h1>
+        </div>
+        <div class="container shadow p-0">
+          <div class="row mx-auto">
+            <div class="col-md-6 text-center img-div">
+              <img
+                src="assets/images/about us.png"
+                height="500"
+                width="500"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-6 about-div" style="margin-top: 40px">
+              <h5 style="padding: 10px">
+                We are passionate about the finest, most cost-effective and
+                timely printing services and promotional items available
+                anywhere in the country. Up-to-date on technology, we create
+                beautiful printed projects, with an easy and pain-free workflow
+                system. We pride ourselves on our commitment to great customer
+                service.<br />
+                <br />
+              </h5>
+              <a href="#home"
+                ><button class="btn"><span>Contact Us</span></button></a
+              >
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="services" id="services" style="height: 100vh">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div
+                class="section-title text-center"
+                style="padding-top: 120px !important"
+              >
+                <h1>
+                  OUR SERVICES<br /><span class="about-sub"
+                    >Rich in services</span
+                  >
+                </h1>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="services__item">
+                  <span class="flaticon-computer"></span>
+                  <h4>PRINTING</h4>
+                  <p>
+                    Printing is a process for mass reproducing text and images
+                    using a master form or template.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="services__item">
+                  <span class="flaticon-vector-design"></span>
+                  <h4>DESIGNING</h4>
+                  <p>
+                    A design is a specification for the construction of an
+                    object or system or for the implementation of an activity.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="services__item">
+                  <span class="flaticon-animation"></span>
+                  <h4>ANIMATION</h4>
+                  <p>
+                    Animation is a method in which figures are manipulated to
+                    appear as moving images.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="works" id="works" style="height: 100vh"></div>
+      <div class="contact" id="contact" style="height: 100vh"></div>
     </div>
-    <div class="serives" id="services" style="height: 100vh"></div>
-    <div class="works" id="works" style="height: 100vh">works</div>
-    <div class="contact" id="contact" style="height: 100vh">contact</div>
-    <script src="assets/javascript/main.js"></script>
   </body>
+  <!-- JS, Popper.js, and jQuery -->
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"
+  ></script>
+  <script src="assets/javascript/main.js"></script>
 </html>
